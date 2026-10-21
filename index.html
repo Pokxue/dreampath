@@ -63,10 +63,10 @@
 
         /* 顶级黑金玻璃卡片 */
         .glass-card {
-            background: rgba(14, 14, 18, 0.88);
+            background: rgba(14, 14, 18, 0.85);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(212, 175, 55, 0.22);
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         .glass-card-hover {
@@ -74,7 +74,7 @@
         }
         .glass-card-hover:hover {
             border-color: rgba(255, 215, 0, 0.5);
-            box-shadow: 0 0 35px rgba(212, 175, 55, 0.18);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.18);
             transform: translateY(-3px);
         }
 
@@ -161,11 +161,11 @@
 <body class="star-bg min-h-screen flex flex-col antialiased selection:bg-gold selection:text-black">
 
     <!-- TOP HEADER BAR -->
-    <header class="sticky top-0 z-40 glass-card border-b border-gold/20 px-4 sm:px-8 xl:px-12 py-3.5 backdrop-blur-xl">
-        <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-6">
+    <header class="sticky top-0 z-40 glass-card border-b border-gold/20 px-4 lg:px-8 py-3.5 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
             
             <!-- Logo -->
-            <div class="flex items-center gap-3 shrink-0">
+            <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-gold-dark via-gold to-gold-bright p-[1px] shadow-lg shadow-gold/20">
                     <div class="w-full h-full bg-obsidian rounded-[11px] flex items-center justify-center">
                         <i class="fa-solid fa-wand-magic-sparkles text-transparent bg-clip-text bg-gradient-to-r from-gold-bright to-gold text-lg"></i>
@@ -180,20 +180,20 @@
             </div>
 
             <!-- Search Bar -->
-            <div class="hidden md:flex flex-1 max-w-lg relative mx-4">
+            <div class="hidden md:flex flex-1 max-w-md relative mx-4">
                 <i class="fa-solid fa-sparkles absolute left-3.5 top-1/2 -translate-y-1/2 text-gold text-sm"></i>
                 <input type="text" 
                        id="searchInput"
                        onkeyup="filterCareers()"
                        placeholder="Search skills, roles, or ask AI advice..." 
-                       class="w-full bg-surface text-sm text-gray-200 placeholder-gold/40 rounded-full pl-10 pr-16 py-2 border border-gold/20 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all shadow-inner">
-                <button onclick="triggerAiDiagnostic()" class="absolute right-1.5 top-1/2 -translate-y-1/2 px-3 py-1 bg-gold/10 hover:bg-gold/20 text-gold text-xs rounded-full border border-gold/30 transition-all">
+                       class="w-full bg-surface text-sm text-gray-200 placeholder-gold/40 rounded-full pl-10 pr-10 py-2 border border-gold/20 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all shadow-inner">
+                <button onclick="triggerAiDiagnostic()" class="absolute right-2 top-1/2 -translate-y-1/2 px-2.5 py-1 bg-gold/10 hover:bg-gold/20 text-gold text-xs rounded-full border border-gold/30 transition-all">
                     Ask AI
                 </button>
             </div>
 
             <!-- Right Nav / User Profile -->
-            <div class="flex items-center gap-4 shrink-0">
+            <div class="flex items-center gap-4">
                 <!-- Notifications Dropdown Trigger -->
                 <div class="relative">
                     <button id="notifBtn" onclick="toggleNotifications()" class="relative p-2 text-gold/80 hover:text-white transition-colors rounded-lg hover:bg-white/5">
@@ -251,14 +251,14 @@
     </header>
 
     <!-- MAIN DASHBOARD CONTENT -->
-    <main class="flex-1 max-w-[1440px] w-full mx-auto px-4 sm:px-6 xl:px-12 py-8 space-y-8">
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
 
         <!-- HERO SECTION: AI CELESTIAL ORB ANALYZER -->
-        <section class="glass-card rounded-3xl p-6 md:p-10 lg:p-12 relative overflow-hidden text-center border-gold/25 shadow-2xl">
+        <section class="glass-card rounded-3xl p-6 md:p-10 relative overflow-hidden text-center border-gold/25 shadow-2xl">
             <!-- Background Glow Blur -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div class="relative z-10 max-w-3xl mx-auto mb-6">
+            <div class="relative z-10 max-w-2xl mx-auto mb-6">
                 <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-semibold mb-3">
                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                     <i class="fa-solid fa-brain text-gold"></i> Neural Analysis Active
@@ -266,41 +266,41 @@
                 <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
                     Your <span class="gold-gradient-text">AI Career Navigator</span>
                 </h2>
-                <p class="text-sm md:text-base text-gray-300 mt-3 leading-relaxed max-w-2xl mx-auto">
+                <p class="text-sm text-gray-300 mt-3 leading-relaxed">
                     Synthesizing your personality traits, skill simulation diagnostics, market demand trends, and career goals in real time.
                 </p>
             </div>
 
             <!-- ANIMATED CELESTIAL ORB & FLOATING NODES -->
-            <div class="relative w-full max-w-3xl h-72 sm:h-80 mx-auto flex items-center justify-center my-6">
+            <div class="relative w-full max-w-2xl h-64 sm:h-72 mx-auto flex items-center justify-center my-4">
                 <!-- Orbital Rings -->
-                <div class="absolute w-60 sm:w-72 h-60 sm:h-72 rounded-full border border-gold/30 animate-spin-slow"></div>
-                <div class="absolute w-72 sm:w-96 h-36 sm:h-48 rounded-full border border-gold/20 rotate-45 animate-spin-reverse"></div>
-                <div class="absolute w-80 sm:w-[420px] h-80 sm:h-[420px] rounded-full border border-dashed border-gold/15 animate-spin-slow"></div>
+                <div class="absolute w-52 sm:w-64 h-52 sm:h-64 rounded-full border border-gold/30 animate-spin-slow"></div>
+                <div class="absolute w-64 sm:w-80 h-32 sm:h-40 rounded-full border border-gold/20 rotate-45 animate-spin-reverse"></div>
+                <div class="absolute w-72 sm:w-96 h-72 sm:h-96 rounded-full border border-dashed border-gold/15 animate-spin-slow"></div>
 
                 <!-- Central Orb -->
-                <div class="relative w-32 sm:w-40 h-32 sm:h-40 rounded-full bg-gradient-to-tr from-gold-dark via-gold to-gold-bright p-1 animate-float shadow-[0_0_60px_rgba(212,175,55,0.45)] cursor-pointer group" onclick="triggerAiDiagnostic()">
+                <div class="relative w-28 sm:w-36 h-28 sm:h-36 rounded-full bg-gradient-to-tr from-gold-dark via-gold to-gold-bright p-1 animate-float shadow-[0_0_60px_rgba(212,175,55,0.45)] cursor-pointer group" onclick="triggerAiDiagnostic()">
                     <div class="w-full h-full bg-obsidian rounded-full flex flex-col items-center justify-center p-2 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-gold/20 to-transparent animate-pulse"></div>
-                        <i class="fa-solid fa-atom text-4xl sm:text-6xl text-gold group-hover:scale-110 transition-transform animate-spin-slow"></i>
+                        <i class="fa-solid fa-atom text-4xl sm:text-5xl text-gold group-hover:scale-110 transition-transform animate-spin-slow"></i>
                         <span id="orbStatusText" class="text-[10px] font-extrabold text-white tracking-widest uppercase mt-2">Active AI</span>
                     </div>
                 </div>
 
                 <!-- Floating Interactive Data Nodes -->
-                <div onclick="showToast('Skill Matrix: Programming & Algorithms high')" class="absolute top-2 left-6 lg:left-16 glass-card px-3.5 py-2 rounded-xl border border-gold/30 flex items-center gap-2 animate-float shadow-lg cursor-pointer hover:border-gold transition-colors" style="animation-delay: 0s;">
+                <div onclick="showToast('Skill Matrix: Programming & Algorithms high')" class="absolute top-2 left-4 sm:left-10 glass-card px-3.5 py-2 rounded-xl border border-gold/30 flex items-center gap-2 animate-float shadow-lg cursor-pointer hover:border-gold transition-colors" style="animation-delay: 0s;">
                     <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
                     <span class="text-xs font-semibold text-gray-200">Tech Skills: 94%</span>
                 </div>
-                <div onclick="showToast('Personality Matrix: Analytical & Problem Solver')" class="absolute bottom-6 left-4 lg:left-12 glass-card px-3.5 py-2 rounded-xl border border-gold/30 flex items-center gap-2 animate-float shadow-lg cursor-pointer hover:border-gold transition-colors" style="animation-delay: 1.5s;">
+                <div onclick="showToast('Personality Matrix: Analytical & Problem Solver')" class="absolute bottom-4 left-2 sm:left-6 glass-card px-3.5 py-2 rounded-xl border border-gold/30 flex items-center gap-2 animate-float shadow-lg cursor-pointer hover:border-gold transition-colors" style="animation-delay: 1.5s;">
                     <div class="w-2 h-2 rounded-full bg-gold"></div>
                     <span class="text-xs font-semibold text-gray-200">Analytical Mindset</span>
                 </div>
-                <div onclick="showToast('Market Signal: High Tech Sector Demand')" class="absolute top-4 right-6 lg:right-16 glass-card px-3.5 py-2 rounded-xl border border-gold/30 flex items-center gap-2 animate-float shadow-lg cursor-pointer hover:border-gold transition-colors" style="animation-delay: 0.8s;">
+                <div onclick="showToast('Market Signal: High Tech Sector Demand')" class="absolute top-4 right-4 sm:right-10 glass-card px-3.5 py-2 rounded-xl border border-gold/30 flex items-center gap-2 animate-float shadow-lg cursor-pointer hover:border-gold transition-colors" style="animation-delay: 0.8s;">
                     <div class="w-2 h-2 rounded-full bg-gold"></div>
                     <span class="text-xs font-semibold text-gray-200">Market Demand: High</span>
                 </div>
-                <div onclick="showToast('Preferences: Hybrid/Remote, Tech Leadership')" class="absolute bottom-4 right-4 lg:right-12 glass-card px-3.5 py-2 rounded-xl border border-gold/30 flex items-center gap-2 animate-float shadow-lg cursor-pointer hover:border-gold transition-colors" style="animation-delay: 2.2s;">
+                <div onclick="showToast('Preferences: Hybrid/Remote, Tech Leadership')" class="absolute bottom-2 right-2 sm:right-6 glass-card px-3.5 py-2 rounded-xl border border-gold/30 flex items-center gap-2 animate-float shadow-lg cursor-pointer hover:border-gold transition-colors" style="animation-delay: 2.2s;">
                     <div class="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
                     <span class="text-xs font-semibold text-gray-200">Remote Flexibility</span>
                 </div>
@@ -320,7 +320,7 @@
             </div>
         </section>
 
-        <!-- TOP RECOMMENDED CAREER MATCHES -->
+        <!-- TOP RECOMMENDED CAREER MATCHES (TABBED SHOWCASE) -->
         <section class="space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
@@ -333,27 +333,27 @@
 
                 <!-- Career Tabs -->
                 <div class="flex items-center gap-1 bg-surface p-1 rounded-2xl border border-gold/20 overflow-x-auto max-w-full">
-                    <button onclick="switchCareerTab(0)" id="tab-0" class="career-tab px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-gold text-obsidian shadow-md whitespace-nowrap">
+                    <button onclick="switchCareerTab(0)" id="tab-0" class="career-tab px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-gold text-obsidian shadow-md">
                         Software Engineer (94%)
                     </button>
-                    <button onclick="switchCareerTab(1)" id="tab-1" class="career-tab px-3.5 py-1.5 rounded-xl text-xs font-medium text-gray-400 hover:text-gold transition-all whitespace-nowrap">
+                    <button onclick="switchCareerTab(1)" id="tab-1" class="career-tab px-3.5 py-1.5 rounded-xl text-xs font-medium text-gray-400 hover:text-gold transition-all">
                         AI Product Mgr (89%)
                     </button>
-                    <button onclick="switchCareerTab(2)" id="tab-2" class="career-tab px-3.5 py-1.5 rounded-xl text-xs font-medium text-gray-400 hover:text-gold transition-all whitespace-nowrap">
+                    <button onclick="switchCareerTab(2)" id="tab-2" class="career-tab px-3.5 py-1.5 rounded-xl text-xs font-medium text-gray-400 hover:text-gold transition-all">
                         UX Architect (86%)
                     </button>
-                    <button onclick="switchCareerTab(3)" id="tab-3" class="career-tab px-3.5 py-1.5 rounded-xl text-xs font-medium text-gray-400 hover:text-gold transition-all whitespace-nowrap">
+                    <button onclick="switchCareerTab(3)" id="tab-3" class="career-tab px-3.5 py-1.5 rounded-xl text-xs font-medium text-gray-400 hover:text-gold transition-all">
                         Data Lead (83%)
                     </button>
                 </div>
             </div>
 
             <!-- PRIMARY MATCH BANNER DISPLAY CARD -->
-            <div id="careerCard" class="glass-card rounded-3xl p-6 md:p-10 relative overflow-hidden border-gold/40 shadow-2xl bg-gradient-to-r from-surface via-obsidian to-surface transition-all duration-300">
+            <div id="careerCard" class="glass-card rounded-3xl p-6 md:p-8 relative overflow-hidden border-gold/40 shadow-2xl bg-gradient-to-r from-surface via-obsidian to-surface transition-all duration-300">
                 <div class="absolute top-0 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
-                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 relative z-10">
-                    <div class="space-y-4 max-w-3xl">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+                    <div class="space-y-4 max-w-2xl">
                         <div class="flex flex-wrap items-center gap-2.5">
                             <span class="px-3 py-1 rounded-full bg-gold/20 border border-gold/40 text-gold text-xs font-semibold tracking-wide flex items-center gap-1">
                                 <i class="fa-solid fa-trophy text-xs"></i> MATCH RANK #<span id="careerRank">1</span>
@@ -383,9 +383,592 @@
                     </div>
 
                     <!-- Action CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row lg:flex-col gap-3 min-w-[240px] shrink-0">
+                    <div class="flex flex-col sm:flex-row lg:flex-col gap-3 min-w-[220px]">
                         <button onclick="openRoadmapModal()" class="w-full py-3.5 px-6 rounded-2xl gold-btn text-sm shadow-lg flex items-center justify-center gap-2">
                             <span>Explore Roadmap</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </button>
-                        <button id="savePortfolioBtn" onclick="toggleSavePortfolio()" class="
+                        <button id="savePortfolioBtn" onclick="toggleSavePortfolio()" class="w-full py-3.5 px-6 rounded-2xl bg-white/5 hover:bg-white/10 border border-gold/20 text-gray-200 hover:text-white font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-bookmark text-gold"></i>
+                            <span id="saveBtnText">Save to Portfolio</span>
+                        </button>
+                        <button onclick="exportCareerBrief()" class="w-full py-2.5 px-4 rounded-xl gold-btn-outline text-xs flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>Export Career Brief</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANALYTICS SECTION: RADAR CHART & PROGRESS METRICS -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- CARD 1: CAREER FIT RADAR CHART (PENTAGON) -->
+            <div class="glass-card glass-card-hover rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-chart-pie text-gold"></i>
+                                Career Fit Skill Radar
+                            </h4>
+                            <p class="text-xs text-gray-400">Multi-domain competency assessment</p>
+                        </div>
+                        <span class="text-xs text-gold bg-gold/10 px-2.5 py-1 rounded-full border border-gold/20 font-semibold">5 Key Domains</span>
+                    </div>
+
+                    <!-- SVG RADAR CHART (PENTAGON) -->
+                    <div class="relative w-full aspect-square max-w-[320px] mx-auto my-2 flex items-center justify-center">
+                        <svg viewBox="0 0 400 400" class="w-full h-full overflow-visible">
+                            <!-- Pentagon Background Grid Rings -->
+                            <polygon points="200,40 352,150 294,330 106,330 48,150" fill="none" stroke="rgba(212, 175, 55, 0.15)" stroke-width="1" />
+                            <polygon points="200,80 314,162 270,298 130,298 86,162" fill="none" stroke="rgba(212, 175, 55, 0.15)" stroke-width="1" />
+                            <polygon points="200,120 276,175 247,265 153,265 124,175" fill="none" stroke="rgba(212, 175, 55, 0.15)" stroke-width="1" />
+                            <polygon points="200,160 238,187 223,233 177,233 162,187" fill="none" stroke="rgba(212, 175, 55, 0.15)" stroke-width="1" />
+
+                            <!-- Axes Lines -->
+                            <line x1="200" y1="200" x2="200" y2="40" stroke="rgba(212, 175, 55, 0.2)" stroke-dasharray="4" />
+                            <line x1="200" y1="200" x2="352" y2="150" stroke="rgba(212, 175, 55, 0.2)" stroke-dasharray="4" />
+                            <line x1="200" y1="200" x2="294" y2="330" stroke="rgba(212, 175, 55, 0.2)" stroke-dasharray="4" />
+                            <line x1="200" y1="200" x2="106" y2="330" stroke="rgba(212, 175, 55, 0.2)" stroke-dasharray="4" />
+                            <line x1="200" y1="200" x2="48" y2="150" stroke="rgba(212, 175, 55, 0.2)" stroke-dasharray="4" />
+
+                            <!-- Dynamic Polygon Data Points -->
+                            <polygon id="radarPolygon" points="200,53 343,153 285,317 120,311 66,156" 
+                                     fill="rgba(212, 175, 55, 0.25)" 
+                                     stroke="#FFD700" 
+                                     stroke-width="2.5" 
+                                     class="transition-all duration-500"/>
+
+                            <circle id="pt0" cx="200" cy="53" r="5" fill="#FFD700" />
+                            <circle id="pt1" cx="343" cy="153" r="5" fill="#D4AF37" />
+                            <circle id="pt2" cx="285" cy="317" r="5" fill="#FFD700" />
+                            <circle id="pt3" cx="120" cy="311" r="5" fill="#D4AF37" />
+                            <circle id="pt4" cx="66" cy="156" r="5" fill="#FFD700" />
+
+                            <!-- Labels -->
+                            <text x="200" y="20" fill="#F3F4F6" font-size="11" font-weight="700" text-anchor="middle">Problem Solving (<span id="lblTech">92%</span>)</text>
+                            <text x="365" y="155" fill="#F3F4F6" font-size="11" font-weight="700" text-anchor="start">Creativity (<span id="lblCreativity">88%</span>)</text>
+                            <text x="305" y="355" fill="#F3F4F6" font-size="11" font-weight="700" text-anchor="start">Communication (<span id="lblComm">85%</span>)</text>
+                            <text x="95" y="355" fill="#F3F4F6" font-size="11" font-weight="700" text-anchor="end">Teamwork (<span id="lblTeam">90%</span>)</text>
+                            <text x="35" y="155" fill="#F3F4F6" font-size="11" font-weight="700" text-anchor="end">Technical Skills (<span id="lblSkill">94%</span>)</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-3.5 rounded-2xl bg-white/5 border border-gold/15 text-xs text-gray-300 flex items-center justify-between">
+                    <span><i class="fa-solid fa-lightbulb text-gold mr-2"></i> Peak Balance: High Technical Rigor & Collaboration</span>
+                    <button onclick="showToast('Radar metrics computed via Neural Simulation Modules')" class="text-gold hover:underline text-[11px] font-medium">Details &rarr;</button>
+                </div>
+            </div>
+
+            <!-- CARD 2: DETAILED METRICS & MARKET DEMAND METRICS -->
+            <div class="glass-card glass-card-hover rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h4 class="text-lg font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-sliders text-gold"></i>
+                                Market Fit & Demand Index
+                            </h4>
+                            <p class="text-xs text-gray-400">Real-time industry growth signals</p>
+                        </div>
+                        <span class="text-xs text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full font-semibold">
+                            <i class="fa-solid fa-arrow-trend-up text-[10px] mr-1"></i> Growing Market
+                        </span>
+                    </div>
+
+                    <!-- Progress Bars -->
+                    <div class="space-y-5">
+                        <!-- Metric 1 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1.5">
+                                <span class="text-gray-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-code text-gold"></i> Technical Alignment
+                                </span>
+                                <span id="m1Val" class="text-gold font-bold">94%</span>
+                            </div>
+                            <div class="w-full bg-white/5 h-2.5 rounded-full overflow-hidden border border-white/5">
+                                <div id="m1Bar" class="bg-gradient-to-r from-gold-dark to-gold-bright h-full rounded-full transition-all duration-700" style="width: 94%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Metric 2 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1.5">
+                                <span class="text-gray-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-chart-line text-emerald-400"></i> Industry YoY Growth Rate
+                                </span>
+                                <span id="m2Val" class="text-emerald-400 font-bold">+22% YoY</span>
+                            </div>
+                            <div class="w-full bg-white/5 h-2.5 rounded-full overflow-hidden border border-white/5">
+                                <div id="m2Bar" class="bg-emerald-400 h-full rounded-full transition-all duration-700" style="width: 82%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Metric 3 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1.5">
+                                <span class="text-gray-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-coins text-gold"></i> Salary Growth Potential
+                                </span>
+                                <span id="m3Val" class="text-gold font-bold">91%</span>
+                            </div>
+                            <div class="w-full bg-white/5 h-2.5 rounded-full overflow-hidden border border-white/5">
+                                <div id="m3Bar" class="bg-gradient-to-r from-gold-dark to-gold-bright h-full rounded-full transition-all duration-700" style="width: 91%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Metric 4 -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1.5">
+                                <span class="text-gray-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-building-user text-gold"></i> Remote Work Availability
+                                </span>
+                                <span id="m4Val" class="text-gold font-bold">88%</span>
+                            </div>
+                            <div class="w-full bg-white/5 h-2.5 rounded-full overflow-hidden border border-white/5">
+                                <div id="m4Bar" class="bg-gradient-to-r from-gold-dark to-gold-bright h-full rounded-full transition-all duration-700" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-gold/15 flex items-center justify-between">
+                    <span class="text-xs text-gray-400">AI Confidence Index: <strong class="text-gold">High (98.4%)</strong></span>
+                    <button onclick="triggerAiDiagnostic()" class="gold-btn-outline px-3 py-1.5 rounded-xl text-xs flex items-center gap-1.5">
+                        <i class="fa-solid fa-rotate-right"></i> Recalibrate
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CAREER SANDBOX / WHAT-IF ANALYZER -->
+        <section class="glass-card rounded-3xl p-6 sm:p-8 border-gold/30">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                <div>
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-flask text-gold"></i>
+                        Interactive Career "What-If" Sandbox
+                    </h3>
+                    <p class="text-xs text-gray-400">Adjust career priorities to see dynamic match shifts & compensation impact</p>
+                </div>
+                <button onclick="resetSandbox()" class="text-xs text-gold hover:underline flex items-center gap-1">
+                    <i class="fa-solid fa-rotate-left"></i> Reset Defaults
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Slider 1 -->
+                <div class="space-y-2 bg-surface/60 p-4 rounded-2xl border border-white/5">
+                    <div class="flex justify-between text-xs font-medium text-gray-300">
+                        <span>Technical Focus Focus</span>
+                        <span id="sliderSkillVal" class="text-gold font-bold">85%</span>
+                    </div>
+                    <input type="range" id="sliderSkill" min="30" max="100" value="85" oninput="updateSandbox()" class="w-full">
+                    <p class="text-[11px] text-gray-500">Weight toward deep technical mastery vs generalism</p>
+                </div>
+
+                <!-- Slider 2 -->
+                <div class="space-y-2 bg-surface/60 p-4 rounded-2xl border border-white/5">
+                    <div class="flex justify-between text-xs font-medium text-gray-300">
+                        <span>Years Experience Goal</span>
+                        <span id="sliderExpVal" class="text-gold font-bold">3 Yrs</span>
+                    </div>
+                    <input type="range" id="sliderExp" min="1" max="10" value="3" oninput="updateSandbox()" class="w-full">
+                    <p class="text-[11px] text-gray-500">Target horizon for senior-level achievement</p>
+                </div>
+
+                <!-- Slider 3 -->
+                <div class="space-y-2 bg-surface/60 p-4 rounded-2xl border border-white/5">
+                    <div class="flex justify-between text-xs font-medium text-gray-300">
+                        <span>Leadership Bias</span>
+                        <span id="sliderLeadVal" class="text-gold font-bold">60%</span>
+                    </div>
+                    <input type="range" id="sliderLead" min="10" max="100" value="60" oninput="updateSandbox()" class="w-full">
+                    <p class="text-[11px] text-gray-500">Preference toward people management vs IC</p>
+                </div>
+            </div>
+
+            <!-- Dynamic Projection Result Box -->
+            <div class="mt-6 p-4 rounded-2xl bg-gradient-to-r from-gold/10 via-surface to-gold/10 border border-gold/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gold/20 flex items-center justify-center text-gold border border-gold/30 text-lg">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400">Dynamic Projection Result</p>
+                        <p class="text-sm font-bold text-white">
+                            Projected Target Salary: <span id="projectedSalary" class="text-gold">$125,000 / yr</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <span class="text-xs text-gray-400">Recalibrated Fit Index:</span>
+                    <span id="projectedFit" class="text-base font-extrabold text-emerald-400 ml-2">95.2%</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="glass-card border-t border-gold/15 mt-12 py-6 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-wand-magic-sparkles text-gold"></i>
+                <span class="font-semibold text-gray-200">DreamPath Supreme Black & Gold Edition</span>
+                <span>&copy; 2026</span>
+            </div>
+            <div class="flex items-center gap-6 text-gold/80">
+                <a href="#" onclick="showToast('Privacy Shield Active')" class="hover:text-white transition-colors">Privacy Neural Engine</a>
+                <a href="#" onclick="showToast('AI Model Version 4.8 Gold')" class="hover:text-white transition-colors">Model Specs</a>
+                <a href="#" onclick="showToast('Connecting to Career Mentor...')" class="hover:text-white transition-colors">Support & Coaching</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ROADMAP MODAL -->
+    <div id="roadmapModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 animate-fadeIn">
+        <div class="glass-card max-w-3xl w-full rounded-3xl border-gold/40 shadow-2xl p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeRoadmapModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="text-xs font-bold text-gold uppercase tracking-wider bg-gold/10 px-3 py-1 rounded-full border border-gold/30">
+                    <i class="fa-solid fa-route mr-1"></i> Career Roadmap Milestone
+                </span>
+                <h3 id="modalCareerTitle" class="text-2xl sm:text-3xl font-extrabold text-white mt-2">
+                    Software Engineer Learning Roadmap
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-300 mt-1">Recommended step-by-step track based on your skills profile.</p>
+            </div>
+
+            <!-- Milestones Timeline -->
+            <div id="roadmapTimeline" class="space-y-6 relative border-l-2 border-gold/30 ml-4 pl-6 py-2">
+                <!-- Milestone 1 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-gold border-4 border-obsidian"></div>
+                    <div class="bg-surface/80 p-4 rounded-2xl border border-white/5 group-hover:border-gold/30 transition-all">
+                        <span class="text-[10px] text-gold font-bold uppercase tracking-wider">Phase 1 (Months 0-3)</span>
+                        <h4 class="text-base font-bold text-white mt-0.5">Foundational Mastery & Data Structures</h4>
+                        <p class="text-xs text-gray-400 mt-1">Master advanced JS/TypeScript, algorithms, and fundamental computer science architectures.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="px-2.5 py-0.5 rounded bg-white/5 text-[11px] text-gray-300">Data Structures</span>
+                            <span class="px-2.5 py-0.5 rounded bg-white/5 text-[11px] text-gray-300">LeetCode Practice</span>
+                            <span class="px-2.5 py-0.5 rounded bg-white/5 text-[11px] text-gray-300">System Basics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-gold/50 border-4 border-obsidian"></div>
+                    <div class="bg-surface/80 p-4 rounded-2xl border border-white/5 group-hover:border-gold/30 transition-all">
+                        <span class="text-[10px] text-gold font-bold uppercase tracking-wider">Phase 2 (Months 3-6)</span>
+                        <h4 class="text-base font-bold text-white mt-0.5">Full Stack Architecture & Cloud Deployment</h4>
+                        <p class="text-xs text-gray-400 mt-1">Build responsive full-stack applications with React, Node.js, and modern cloud deployment pipelines.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="px-2.5 py-0.5 rounded bg-white/5 text-[11px] text-gray-300">React & Tailwind</span>
+                            <span class="px-2.5 py-0.5 rounded bg-white/5 text-[11px] text-gray-300">AWS / Vercel</span>
+                            <span class="px-2.5 py-0.5 rounded bg-white/5 text-[11px] text-gray-300">REST API & GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-gold/30 border-4 border-obsidian"></div>
+                    <div class="bg-surface/80 p-4 rounded-2xl border border-white/5 group-hover:border-gold/30 transition-all">
+                        <span class="text-[10px] text-gold font-bold uppercase tracking-wider">Phase 3 (Months 6-12)</span>
+                        <h4 class="text-base font-bold text-white mt-0.5">Senior Technical Leadership & Optimization</h4>
+                        <p class="text-xs text-gray-400 mt-1">Lead software engineering teams, optimize database performance, and architect resilient distributed services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 flex justify-end gap-3 pt-4 border-t border-gold/15">
+                <button onclick="closeRoadmapModal()" class="px-5 py-2.5 rounded-xl bg-white/5 text-gray-300 text-xs hover:bg-white/10 font-semibold transition-all">
+                    Close
+                </button>
+                <button onclick="showToast('Roadmap synced to your calendar!')" class="gold-btn px-5 py-2.5 rounded-xl text-xs flex items-center gap-2">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Sync to Goal Calendar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 glass-card border-gold/40 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transition-all duration-300 transform translate-y-20 opacity-0 pointer-events-none">
+        <div class="w-8 h-8 rounded-xl bg-gold/20 flex items-center justify-center text-gold">
+            <i class="fa-solid fa-sparkles text-sm"></i>
+        </div>
+        <div>
+            <p id="toastMessage" class="text-xs font-semibold text-white">Notification Action Success</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Career Data State
+        const careerData = [
+            {
+                title: "Software Engineer",
+                suitability: 94,
+                rank: 1,
+                desc: "High logic and problem-solving capacities demonstrated in your recent debugging simulation make Software Engineering your strongest career trajectory.",
+                salary: "$95k - $130k / yr",
+                radar: [92, 88, 85, 90, 94], // Problem, Creativity, Comm, Team, Skill
+                m1: 94, m2: 82, m3: 91, m4: 88,
+                tags: ["<i class='fa-solid fa-laptop-code text-gold mr-1.5'></i>Tech Sector", "<i class='fa-solid fa-briefcase text-gold mr-1.5'></i>Full-time", "<i class='fa-solid fa-house-laptop text-emerald-400 mr-1.5'></i>Remote / Hybrid", "<i class='fa-solid fa-sack-dollar text-gold mr-1.5'></i>$95k - $130k / yr"]
+            },
+            {
+                title: "AI / ML Product Manager",
+                suitability: 89,
+                rank: 2,
+                desc: "Your balanced split between technical logic and interpersonal communication aligns exceptionally with leading AI product roadmaps.",
+                salary: "$110k - $155k / yr",
+                radar: [86, 92, 95, 92, 80],
+                m1: 85, m2: 95, m3: 96, m4: 82,
+                tags: ["<i class='fa-solid fa-brain text-gold mr-1.5'></i>AI & ML", "<i class='fa-solid fa-chart-line text-gold mr-1.5'></i>Product Strategy", "<i class='fa-solid fa-sack-dollar text-gold mr-1.5'></i>$110k - $155k / yr"]
+            },
+            {
+                title: "UI/UX Systems Architect",
+                suitability: 86,
+                rank: 3,
+                desc: "High visual creativity combined with technical structured thinking makes UI/UX Systems Architecture a top natural match.",
+                salary: "$90k - $125k / yr",
+                radar: [80, 96, 88, 86, 82],
+                m1: 82, m2: 78, m3: 88, m4: 94,
+                tags: ["<i class='fa-solid fa-palette text-gold mr-1.5'></i>Design Systems", "<i class='fa-solid fa-eye text-gold mr-1.5'></i>User Experience", "<i class='fa-solid fa-sack-dollar text-gold mr-1.5'></i>$90k - $125k / yr"]
+            },
+            {
+                title: "Data Science Lead",
+                suitability: 83,
+                rank: 4,
+                desc: "Strong analytical modeling capabilities position you well for data extraction, machine learning pipelines, and predictive analysis.",
+                salary: "$105k - $145k / yr",
+                radar: [95, 82, 80, 84, 90],
+                m1: 90, m2: 88, m3: 92, m4: 85,
+                tags: ["<i class='fa-solid fa-database text-gold mr-1.5'></i>Big Data", "<i class='fa-solid fa-square-poll-vertical text-gold mr-1.5'></i>Analytics", "<i class='fa-solid fa-sack-dollar text-gold mr-1.5'></i>$105k - $145k / yr"]
+            }
+        ];
+
+        let activeCareerIdx = 0;
+        let isSaved = false;
+
+        // Tab Switching Logic
+        function switchCareerTab(index) {
+            activeCareerIdx = index;
+            const data = careerData[index];
+
+            // Update Tab Active Styles
+            document.querySelectorAll('.career-tab').forEach((tab, i) => {
+                if (i === index) {
+                    tab.className = "career-tab px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all bg-gold text-obsidian shadow-md";
+                } else {
+                    tab.className = "career-tab px-3.5 py-1.5 rounded-xl text-xs font-medium text-gray-400 hover:text-gold transition-all";
+                }
+            });
+
+            // Update Banner Information
+            document.getElementById('careerTitle').innerText = data.title;
+            document.getElementById('modalCareerTitle').innerText = data.title + " Learning Roadmap";
+            document.getElementById('careerMatchBadge').innerText = data.suitability + "% Suitability";
+            document.getElementById('careerRank').innerText = data.rank;
+            document.getElementById('careerDesc').innerText = data.desc;
+
+            // Update Tags
+            const tagsContainer = document.getElementById('careerTags');
+            tagsContainer.innerHTML = '';
+            data.tags.forEach(t => {
+                const span = document.createElement('span');
+                span.className = "px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300";
+                span.innerHTML = t;
+                tagsContainer.appendChild(span);
+            });
+
+            // Update Metrics Bars
+            updateMetricBars(data.m1, data.m2, data.m3, data.m4);
+
+            // Update Pentagon Radar
+            updateRadarChart(data.radar);
+
+            // Reset Save State
+            isSaved = false;
+            updateSaveBtnUI();
+        }
+
+        // Update Radar SVG Polygon
+        function updateRadarChart(scores) {
+            // Scores [Problem, Creativity, Comm, Team, Skill]
+            // Calculate Pentagon points from center (200, 200)
+            const angles = [-Math.PI/2, -Math.PI/2 + (2*Math.PI/5), -Math.PI/2 + (4*Math.PI/5), -Math.PI/2 + (6*Math.PI/5), -Math.PI/2 + (8*Math.PI/5)];
+            const maxR = 160;
+
+            const pts = scores.map((score, i) => {
+                const r = (score / 100) * maxR;
+                const x = 200 + r * Math.cos(angles[i]);
+                const y = 200 + r * Math.sin(angles[i]);
+                return { x, y };
+            });
+
+            // Set polygon points string
+            const pointsStr = pts.map(p => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+            document.getElementById('radarPolygon').setAttribute('points', pointsStr);
+
+            // Update circles
+            pts.forEach((p, i) => {
+                const circle = document.getElementById(`pt${i}`);
+                if (circle) {
+                    circle.setAttribute('cx', p.x.toFixed(1));
+                    circle.setAttribute('cy', p.y.toFixed(1));
+                }
+            });
+
+            // Labels
+            document.getElementById('lblTech').innerText = scores[0] + '%';
+            document.getElementById('lblCreativity').innerText = scores[1] + '%';
+            document.getElementById('lblComm').innerText = scores[2] + '%';
+            document.getElementById('lblTeam').innerText = scores[3] + '%';
+            document.getElementById('lblSkill').innerText = scores[4] + '%';
+        }
+
+        // Dynamic Metric Progress Bars Update
+        function updateMetricBars(m1, m2, m3, m4) {
+            document.getElementById('m1Val').innerText = m1 + '%';
+            document.getElementById('m1Bar').style.width = m1 + '%';
+
+            document.getElementById('m2Val').innerText = '+' + m2 + '% YoY';
+            document.getElementById('m2Bar').style.width = m2 + '%';
+
+            document.getElementById('m3Val').innerText = m3 + '%';
+            document.getElementById('m3Bar').style.width = m3 + '%';
+
+            document.getElementById('m4Val').innerText = m4 + '%';
+            document.getElementById('m4Bar').style.width = m4 + '%';
+        }
+
+        // Interactive "What-If" Sandbox Simulator Logic
+        function updateSandbox() {
+            const skill = parseInt(document.getElementById('sliderSkill').value);
+            const exp = parseInt(document.getElementById('sliderExp').value);
+            const lead = parseInt(document.getElementById('sliderLead').value);
+
+            document.getElementById('sliderSkillVal').innerText = skill + '%';
+            document.getElementById('sliderExpVal').innerText = exp + ' Yrs';
+            document.getElementById('sliderLeadVal').innerText = lead + '%';
+
+            // Calculated Output Values
+            const baseSalary = 85000;
+            const calculatedSalary = baseSalary + (skill * 350) + (exp * 6500) + (lead * 200);
+            const fitIndex = Math.min(99.8, (70 + (skill * 0.15) + (exp * 1.2) + (lead * 0.05))).toFixed(1);
+
+            document.getElementById('projectedSalary').innerText = '$' + calculatedSalary.toLocaleString() + ' / yr';
+            document.getElementById('projectedFit').innerText = fitIndex + '%';
+        }
+
+        function resetSandbox() {
+            document.getElementById('sliderSkill').value = 85;
+            document.getElementById('sliderExp').value = 3;
+            document.getElementById('sliderLead').value = 60;
+            updateSandbox();
+            showToast('Sandbox reset to baseline parameters');
+        }
+
+        // Save Portfolio Toggle
+        function toggleSavePortfolio() {
+            isSaved = !isSaved;
+            updateSaveBtnUI();
+            if (isSaved) {
+                showToast(`Saved "${careerData[activeCareerIdx].title}" to your portfolio!`);
+            } else {
+                showToast(`Removed from portfolio.`);
+            }
+        }
+
+        function updateSaveBtnUI() {
+            const btnText = document.getElementById('saveBtnText');
+            const btn = document.getElementById('savePortfolioBtn');
+            if (isSaved) {
+                btnText.innerText = "Saved in Portfolio";
+                btn.className = "w-full py-3.5 px-6 rounded-2xl bg-gold/20 border border-gold text-gold font-semibold text-sm transition-all flex items-center justify-center gap-2";
+            } else {
+                btnText.innerText = "Save to Portfolio";
+                btn.className = "w-full py-3.5 px-6 rounded-2xl bg-white/5 hover:bg-white/10 border border-gold/20 text-gray-200 hover:text-white font-semibold text-sm transition-all flex items-center justify-center gap-2";
+            }
+        }
+
+        // AI Diagnostic Execution
+        function triggerAiDiagnostic() {
+            const orbText = document.getElementById('orbStatusText');
+            const promptInput = document.getElementById('aiPromptInput');
+            
+            orbText.innerText = "Processing...";
+            showToast("DreamPath AI Neural Engine executing real-time diagnostics...");
+
+            setTimeout(() => {
+                orbText.innerText = "Active AI";
+                showToast("Diagnostic complete: Dynamic Career Trajectory updated!");
+                if (promptInput.value.trim() !== "") {
+                    promptInput.value = "";
+                }
+            }, 1200);
+        }
+
+        // Modal Controls
+        function openRoadmapModal() {
+            document.getElementById('roadmapModal').classList.remove('hidden');
+        }
+
+        function closeRoadmapModal() {
+            document.getElementById('roadmapModal').classList.add('hidden');
+        }
+
+        // Export Brief
+        function exportCareerBrief() {
+            showToast(`Generating Career Brief PDF for ${careerData[activeCareerIdx].title}...`);
+            setTimeout(() => {
+                showToast(`Career Brief ready for download!`);
+            }, 1000);
+        }
+
+        // Toggle Notifications Dropdown
+        function toggleNotifications() {
+            const dropdown = document.getElementById('notifDropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Search Filter Simulation
+        function filterCareers() {
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            const foundIndex = careerData.findIndex(c => c.title.toLowerCase().includes(q));
+            if (foundIndex !== -1 && foundIndex !== activeCareerIdx) {
+                switchCareerTab(foundIndex);
+            }
+        }
+
+        // Global Toast Notification Helper
+        function showToast(msg) {
+            const toast = document.getElementById('toasvt');
+            const toastMsg = document.getElementById('toastMessage');
+            toastMsg.innerText = msg;
+            
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 2500);
+        }
+
+        // Initialize default view
+        window.onload = function() {
+            switchCareerTab(0);
+            updateSandbox();
+        };
+    </script>
+</body>
+</html>
